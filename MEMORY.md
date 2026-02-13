@@ -30,6 +30,13 @@ _(none yet — just got here)_
 - Telegram paired (Pat's user ID: 7827979987)
 - OpenClaw multi-agent: main (Spark/Opus) + bob (GPT-OSS-120B/Ollama)
 - Workspace backed up to GitHub: Patvscode/Openclaw_Spark (daily auto-backup at noon via cron → Bob)
+
+## Agent Delegation
+- Bob (120B): sessions_spawn(agentId="bob", task="...") — deep research, ~2min, 131K ctx
+- Mini (20B): sessions_spawn(agentId="mini", task="...") — quick tasks, ~18s, 32K ctx
+- Both free (local Ollama). Mini for speed, Bob for depth.
+- OLLAMA_NUM_PARALLEL=3 active — 3 parallel inference slots on GPU
+- Sudo access granted for service management
 - Workspace backed up to GitHub: Patvscode/Openclaw_Spark (daily auto-backup at noon via cron → Bob)
 
 ## Rate Limit Strategy
