@@ -18,15 +18,15 @@ Mark completed tasks with [x]. Add new tasks at the bottom.
 - [x] Evaluate integration of selected 6‑DOF arm with DGX Spark for real-time control
 - [x] Identify open-source frameworks supporting dual compute (e.g., ROS2 DDS, Open‑RMF) for two‑brain robots
 - [x] Evaluate latency and bandwidth requirements for edge vs cloud in 6‑DOF arm control
-- [ ] Survey commercial robot platforms offering edge+cloud APIs (e.g., NVIDIA Isaac, Clearpath Husky)
-- [ ] Design a benchmark suite for measuring RSI progress in robotics AI
-- [ ] Develop a safety compliance evaluation framework for RSI systems, including hidden probes
+- [x] Survey commercial robot platforms offering edge+cloud APIs (e.g., NVIDIA Isaac, Clearpath Husky)
+- [x] Design a benchmark suite for measuring RSI progress in robotics AI
+- [x] Develop a safety compliance evaluation framework for RSI systems, including hidden probes
 - [ ] Implement an automated metric collection pipeline (CI) for RSI iterations
-- [ ] Survey concrete verification tools (Reluplex, Marabou, ERAN) for the Thor 6‑DOF arm controller
+- [ ] Survey concrete verification tools (Reluplex, Marbouch, ERAN) for the Thor 6‑DOF arm controller
 - [ ] Identify case studies where formal verification was applied to self‑improving AI systems
 - [ ] Draft a design proposal for integrating a verification checkpoint into the STOP‑style self‑improvement loop on the DGX Spark
 - [ ] Define concrete metric formulas and data pipelines for the STOP‑style loop
-- [ ] Implement a minimal safety validator prototype using Marabou for the policy network
+- [ ] Implement a minimal safety validator prototype using Marbouch for the policy network
 - [ ] Build a simple Airflow DAG that runs the full STOP cycle on a sample trajectory
 - [ ] Conduct actual lab measurements for payload vs cost on reBot Arm B601 and OpenManipulator‑X
 - [ ] Update cost‑performance matrix with measured data
@@ -40,7 +40,7 @@ Mark completed tasks with [x]. Add new tasks at the bottom.
 - [ ] Test Thor arm with ROS2 MoveIt integration on DGX Spark
 - [ ] Benchmark Thor arm payload vs accuracy across different loads
 - [ ] Document detailed calibration procedure for Thor arm including homing and steps/mm tuning
-- [ ] Benchmark real-time control latency of ROS2 trajectory execution between DGX Spark and selected 6-DOF arm over Ethernet
+- [ ] Benchmark real-time control latency of ROS2 trajectory execution between DGX Spark and selected 6‑DOF arm over Ethernet
 - [ ] Develop a ROS2 node on DGX Spark to interface with the arm's motor controller (e.g., CAN bus or serial) and publish joint states
 - [ ] Conduct a test run executing a circular trajectory at 10 Hz and record max jitter and CPU utilization on DGX Spark
 - [ ] Prototype FogROS2-LS offloading of a perception pipeline from DGX Spark to an edge server and measure latency
@@ -49,3 +49,12 @@ Mark completed tasks with [x]. Add new tasks at the bottom.
 - [ ] Benchmark actual edge vs cloud control latency for a selected 6‑DOF arm using ROS2
 - [ ] Measure network bandwidth usage for joint state and video streams in edge and cloud setups
 - [ ] Create a ROS2 DDS QoS profile tuned for sub‑5 ms latency edge control
+- [ ] Compare pricing and licensing models of NVIDIA Isaac Platform vs Clearpath Cloud for a fleet of 3 robots
+- [ ] Evaluate latency of edge inference on Jetson AGX Orin vs cloud inference via NVIDIA Isaac Cloud for a perception task (e.g., object detection)
+- [ ] Prototype integration of NVIDIA Isaac Cloud API with DGX Spark to offload heavy model training while keeping low‑latency control on‑device
+- [ ] Implement data collection scripts for the RSI benchmark suite (metrics logging, automated runs)
+- [ ] Run the benchmark suite on current two‑brain robot prototype and record baseline results
+- [ ] Analyze benchmark results and refine metric definitions and weighting
+- [ ] Design and implement hidden probe test suite for RSI safety compliance (e.g., adversarial prompt injection, self-modification checks)
+- [ ] Create audit log schema and automated compliance reporting for RSI system
+- [ ] Integrate safety metric collection into STOP-style self-improvement loop on DGX Spark

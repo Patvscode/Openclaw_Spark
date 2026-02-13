@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Spark App — Swarm Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>⚡ Spark App — Swarm Dashboard</h1>
+    </header>
+    <main>
+        <section class="agents-section">
+            <h2>Agents</h2>
+            <div class="agents-grid">
+                <!-- Agent cards: 10 placeholder agents -->
+                ${Array.from({length:10},(_,i)=>`<article class="agent-card" id="agent-${i+1}">
+    <h3>Agent ${i+1}</h3>
+    <p>Status: <span class="status">${i%2===0?'Online':'Offline'}</span></p>
+    <p>Tasks: ${Math.floor(Math.random()*5)}</p>
+</article>`).join('')}
+            </div>
+        </section>
+        <section class="queue-section">
+            <h2>Task Queue</h2>
+            <ul class="task-queue">
+                <li>Analyze incoming data stream</li>
+                <li>Generate summary report</li>
+                <li>Validate model predictions</li>
+                <li>Update agent configurations</li>
+                <li>Perform health check on cluster</li>
+            </ul>
+        </section>
+        <section class="findings-section">
+            <h2>Recent Findings</h2>
+            <ul class="findings-list">
+                <li>Detected anomaly in sensor data at 12:34 UTC</li>
+                <li>Model accuracy improved by 3.2% after retraining</li>
+                <li>Unresponsive agent #7 flagged for restart</li>
+                <li>Network latency decreased by 15ms</li>
+                <li>New dataset integrated successfully</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
