@@ -31,6 +31,9 @@ _(none yet — just got here)_
 - Use Bob for: web searches, file ops, summaries, cron jobs, git backups
 - Reserve Opus for: complex reasoning, multi-step planning, creative work
 
-## Bob Delegation
-To hand work to Bob: sessions_spawn(agentId="bob", task="...description...")
-Bob runs on local Ollama (GPT-OSS-120B), zero API cost, 131K context window.
+## Agent Delegation
+- Bob (120B): sessions_spawn(agentId="bob", task="...") — deep research, ~2min, 131K ctx
+- Mini (20B): sessions_spawn(agentId="mini", task="...") — quick tasks, ~18s, 32K ctx
+- Both free (local Ollama). Mini for speed, Bob for depth.
+- OLLAMA_NUM_PARALLEL=3 active — 3 parallel inference slots on GPU
+- Sudo access granted for service management
