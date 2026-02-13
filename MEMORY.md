@@ -22,3 +22,15 @@ _(none yet — just got here)_
 - DGX Spark: 20-core ARM64, 128GB RAM, GB10 GPU, 3.7TB NVMe
 - Telegram paired (Pat's user ID: 7827979987)
 - OpenClaw multi-agent: main (Spark/Opus) + bob (GPT-OSS-120B/Ollama)
+- Workspace backed up to GitHub: Patvscode/Openclaw_Spark (daily auto-backup at noon via cron → Bob)
+
+## Rate Limit Strategy
+- Anthropic Opus: 30K input tokens/min
+- Trimmed all workspace files to minimize per-turn overhead
+- Delegate simple tasks to Bob (free, local) via sessions_spawn(agentId="bob")
+- Use Bob for: web searches, file ops, summaries, cron jobs, git backups
+- Reserve Opus for: complex reasoning, multi-step planning, creative work
+
+## Bob Delegation
+To hand work to Bob: sessions_spawn(agentId="bob", task="...description...")
+Bob runs on local Ollama (GPT-OSS-120B), zero API cost, 131K context window.

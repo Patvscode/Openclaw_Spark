@@ -1,0 +1,5 @@
+# Sensitive / ephemeral
+memory/heartbeat-state.json
+*.tmp
+*.log
+.env
