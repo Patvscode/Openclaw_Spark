@@ -25,6 +25,11 @@ _(none yet — just got here)_
 - Use Bob for: web searches, file ops, summaries, cron jobs, git backups
 - Reserve Opus for: complex reasoning, multi-step planning, creative work
 
+## TownHall Group Chat (Temporary)
+- Chat ID: -5195425739
+- Append to every message I send there: @Alphamini1bot @Betamini2bot @Deltamini4bot @Gammamini3bot @Opclpmbot
+- Temporary until Pat configures @-free visibility for all bots
+
 ## Environment
 - DGX Spark: 20-core ARM64, 128GB RAM, GB10 GPU, 3.7TB NVMe
 - Telegram paired (Pat's user ID: 7827979987)
