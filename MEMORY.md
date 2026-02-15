@@ -30,6 +30,18 @@ _(none yet — just got here)_
 - Append to every message I send there: @Alphamini1bot @Betamini2bot @Deltamini4bot @Gammamini3bot @Opclpmbot
 - Temporary until Pat configures @-free visibility for all bots
 
+## AI-Scientist (Sakana)
+- Repo: ~/.openclaw/workspace-bob/AI-Scientist/
+- Python 3.12 venv with PyTorch 2.10.0+cu130 (CUDA working on GB10)
+- Patched llm.py for Ollama: `ollama/qwen3:8b`, `ollama/qwen3:32b`, etc.
+- NanoGPT template prepped (shakespeare_char dataset)
+- First successful experiment run with qwen3-coder (no thinking mode!)
+- Qwen3 thinking mode breaks OpenAI-compatible API (content empty, thinking eats tokens)
+- qwen3-coder is the only Qwen3 model WITHOUT thinking mode — use for AI-Scientist
+- DGX Spark needs cu130 wheels (not cu128/cu124) — use `--index-url https://download.pytorch.org/whl/cu130`
+- sm_121 warning safe to ignore
+- datasets pip package fails (pyarrow build issue) — skip it, not needed for NanoGPT
+
 ## Environment
 - DGX Spark: 20-core ARM64, 128GB RAM, GB10 GPU, 3.7TB NVMe
 - Telegram paired (Pat's user ID: 7827979987)
