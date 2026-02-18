@@ -63,3 +63,35 @@ _(none yet — just got here)_
 - Qwen3 CAN use tools — fix: tool name hints in SOUL.md (exec/write/read not run/write_file/read_file)
 - DeepSeek R1 CANNOT use tools at all
 - FLASH is most reliable; gateway restarts kill running tasks
+
+## Current Focus: Daily Utility (2026-02-15)
+- Pat: stop tinkering with research infra, make agents useful for daily tasks
+- **ARA6D postponed 2 more weeks** (Pat's call)
+- Morning briefing cron: 7:30 AM EST daily (weather, AI-Scientist, GitHub, system health)
+- **gh authenticated** (GitHub: Patvscode) — notifications + activity in briefing ✅
+- Blocked on email/calendar: gog needs OAuth (patcodesml@gmail.com) — manual flow tried, needs browser
+- FLASH promoted to coordinator — Pat talks to FLASH (@Alphamini1bot) for free local work
+- FLASH can spawn CODER, RUNNER, REASON, VISION
+
+## Lessons Learned
+- AI-Scientist pipeline works end-to-end autonomously — let it run in background, don't babysit
+- qwen3-coder best for AI-Scientist (no thinking mode, fast, reliable tool calls)
+- Research infra has diminishing returns — pivot to practical daily value quickly
+- **Don't run Opus crons frequently** — ai-scientist-monitor at 30min intervals burned all credits in hours
+- Route all monitoring/routine crons to local models (FLASH) — reserve Opus for conversations only
+- **FLASH is Pat's primary contact now** — I (Spark) handle complex/expensive tasks only
+
+## Recent Major Updates (2026-02-17)
+- **Switched to Sonnet 4** — saving significant money vs Opus, morning briefing also moved to FLASH
+- **Qwen 3.5 released** (Feb 16) — 397B/17B active, built for agentic AI, not on Ollama yet
+- **AI-Scientist scaled to 2 pipelines** — nanoGPT (2+ days, 5 experiments) + grokking (launched today)
+- **Research server live** — Tailscale HTTP serving all results at 100.109.173.109:8080
+
+## Remaining TODO
+1. Complete gog OAuth (email/calendar integration) — blocked on process timeouts
+2. Scale AI-Scientist to 3 pipelines tomorrow, max Thursday (original plan)
+3. Build research-on-demand flow (FLASH handles)
+4. Build code generation pipeline
+5. Sesame CSM installation
+6. Spark Hub Electron packaging
+7. ARA6D planning (after 2 weeks)
